@@ -5,7 +5,7 @@ body{
 	margin: 0 auto;
 }
 
-section{
+.sectionImg {
 	/*width: 96%;
 	height: 100vh;	*/
 	margin: 1%;
@@ -16,7 +16,7 @@ section{
 	grid-auto-flow: dense;
 }
 
-section div{
+.sectionImg div{
 	margin: 3px;
 }
 
@@ -35,9 +35,13 @@ img{
 	grid-column: span 2;
 }
 
-#cuadro {
-	grid-column: span 5;
+.content {
+	grid-column: span 6;
 	grid-row: span 2;
 	border: 25px solid silver;
 	border-radius: 15px;
+}
+
+.showcase {
+	width: 100%;
 }
