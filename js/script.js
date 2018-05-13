@@ -2,16 +2,16 @@
 const data = {
     adminBtnVisible: false,
     cats: [{
+        name: 'Jugueton',
+        src: 'img/jugueton.jpg',
+        clicksCount: 0
+    },{
         name: 'Negrita',
         src: 'img/negrita.jpg',
         clicksCount: 0
     }, {
         name: 'Kitty',
         src: 'img/kitty.jpg',
-        clicksCount: 0
-    }, {
-        name: 'Jugueton',
-        src: 'img/jugueton.jpg',
         clicksCount: 0
     }, {
         name: 'Monita',
@@ -67,7 +67,15 @@ const catView = {
         selector.cats.forEach(element => {
             // Create the cats list menu
             const li = document.createElement('li');
-            li.innerText = element.name;
+            /*li.innerText = element.name;*/
+             li.innerHTML = "<div class='horizontal'><img src ='" + element.src+"' </div>";
+            if(element.src ==! 'img/jugueton.jpg'){
+                 li.innerHTML = "<div class='horizontal'><img src ='" + element.src+"' </div>";
+             }else{
+                 li.innerHTML = "<div class='big'><img src ='" + element.src+"' </div>";
+             }
+           
+
             selector.list.appendChild(li);
 
             // Change image on click
@@ -137,3 +145,5 @@ const catView = {
 }
 
 octopus.init();
+
+
